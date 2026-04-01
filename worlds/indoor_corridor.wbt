@@ -1,0 +1,92 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/lights/protos/FloorLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+  info [
+    "Pioneer 3DX (Adept Mobile Robots)"
+    "This two-wheel, two-motor differential drive robot has in addition a rear caster wheel"
+    "It is programmed to perform a simple obstacle avoidance behavior based on the values sensed by its 16 sonars"
+  ]
+  title "Pioneer 3-DX with blinking LEDs moving according to a Braitenberg rule"
+  basicTimeStep 8
+}
+Viewpoint {
+  fieldOfView 0.660595
+  orientation 0.5584245902572824 0.6510100287429772 -0.514147760349157 2.061638941203414
+  position -5.640298679244435 1.833429942790362 11.042549256612192
+}
+TexturedBackground {
+}
+RectangleArena {
+  floorSize 12 12
+  floorTileSize 2 2
+  wallHeight 0.4
+}
+DEF VISION Pioneer3dx {
+  hidden position_0_0 2.9629754477448145e-05
+  hidden position_0_1 19499.917067702696
+  hidden position_0_2 22607.8797954249
+  hidden linearVelocity_0 0.06259609972232885 -0.4038982132308051 4.83230065793648e-13
+  hidden angularVelocity_0 1.7122174351030112e-08 -1.1044145399106544e-07 -2.026139334125885e-05
+  hidden rotation_1 0.5773616736877785 -0.5773445668565761 -0.5773445668555648 2.0943778933377555
+  hidden position_1_0 -4823.88050023036
+  hidden linearVelocity_1 0.06259873351471996 -0.40389780507860684 1.3384909030910871e-12
+  hidden angularVelocity_1 1.7856598800381602e-08 -1.1518085373660039e-07 -2.040611788033353e-05
+  hidden rotation_2 1 0 0 1.6058156835626567
+  hidden linearVelocity_2 0.06259891000680617 -0.4038977777309933 1.3167918493192669e-12
+  hidden angularVelocity_2 10.77058551814968 1.6694454791796547 -3.399304964069533e-05
+  hidden rotation_4 0.5870030730397566 -0.5870031407016167 0.5575434557488054 4.1588252072415886
+  hidden linearVelocity_4 0.06259537448563535 -0.40390170079972515 1.807967345635902e-08
+  hidden angularVelocity_4 4.142552581531157 0.6419715417215209 -2.077291928685975e-05
+  hidden rotation_9 0.27991474842973857 -0.27991471068982016 -0.9183112154117201 1.6559122209239683
+  hidden linearVelocity_9 0.06259435290184955 -0.40389510874617274 -1.8079529122518802e-08
+  hidden angularVelocity_9 4.142551320093135 0.641971346028209 -2.0772904175440584e-05
+  translation -5.34942857088894 2.0711160126211787 0.09682949130751316
+  rotation 0.01887740571634444 0.022028065168340046 0.9995791153772472 -1.417465362677624
+  name "Vision_Robot"
+  controller "vision_ai_controller"
+  extensionSlot [
+    Camera {
+      translation 0.1 0 0.3
+      fieldOfView 1.04
+      width 640
+      height 480
+    }
+  ]
+}
+CardboardBox {
+  translation -0.201269 4.94642 0.3
+}
+CardboardBox {
+  translation 0.225428 -5.08162 0.3
+  name "cardboard box(1)"
+}
+FloorLight {
+  translation 0.351337 -0.184194 0
+  pointLightIntensity 10
+  pointLightCastShadows TRUE
+}
+WoodenBox {
+  translation 4.01933 -3.31136 0.3
+}
+WoodenBox {
+  translation 3.98789 3.08066 0.3
+  name "wooden box(1)"
+}
+WoodenBox {
+  translation -4.22157 -3.54663 0.3
+  name "wooden box(2)"
+}
+WoodenBox {
+  translation -4.21065 2.89465 0.3
+  name "wooden box(3)"
+}
+TexturedBackgroundLight {
+}
